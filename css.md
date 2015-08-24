@@ -6,7 +6,7 @@
     <span class="font-20" ng-bind="title"></span>
 </div>
 ```
-```css
+```scss
 .vcp-title {
   width: 110px;
   border-bottom: 2px solid $pure-mainblue;
