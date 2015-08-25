@@ -1,4 +1,4 @@
-# css
+# SCSS Mixin
 ## vertical-align的用处
 ```html
 <div class="vcp-title">
@@ -52,6 +52,8 @@ body {
 ```
 
 ### 2. 字体stack
+> 感觉这个用的不多
+
 ```scss
 $font-stack:
 	(group: brandon, id: light, font: ('Brandon Grot W01 Light', san-serif ), weight: 200, style: normal),
@@ -73,7 +75,29 @@ $font-stack:
     	}
   	}
 }
+
+h1{
+  @include font(brandon, light-italic);
+}
+p{
+  @include font(brandon);
+}
+p i{
+  @include font(brandon, regular-italic);
+}
+p b{
+  @include font(brandon, bold);
+}
+blockquote{
+  @include font(clarendon);
+}
+code{
+  @include font(code);
+}
 ```
+
+### 3. Media Queries
+
 
 
 
