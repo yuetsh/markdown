@@ -32,7 +32,7 @@ $color-stack :
 	(group: blue, id: dark, color: #448AFF),
 	(group: blue, id: light, color: #00BCD4);
 
-@function color ($ground, $shade:normal, $transparency:1) {
+@function color ($group, $shade:normal, $transparency:1) {
 	@each $color in $color-stack{
     $color-group: map-get($color, group);
     $color-shade: map-get($color, id);
@@ -50,3 +50,96 @@ body {
 	}
 }
 ```
+
+### 2. 字体stack
+```scss
+$font-stack:
+	(group: brandon, id: light, font: ('Brandon Grot W01 Light', san-serif ), weight: 200, style: normal),
+	(group: brandon, id: light-italic, font: ('Brandon Grot W01 Light', san-serif ), weight: 200, style: italic),
+	(group: brandon, id: regular, font: ('Brandon Grot W01-Regular', san-serif), weight: 400, style: normal),
+	(group: brandon, id: regular-italic, font: ('Brandon Grot W01-Regular', san-serif), weight: 400, style: italic),
+	(group: brandon, id: bold, font: ('Brandon Grot W01 Black', san-serif), weight: 700, style: normal),
+	(group: brandon, id: bold-italic, font: ('Brandon Grot W01-Regular', san-serif), weight: 400, style: italic),
+	(group: clarendon, id: regular, font: ('Clarendon LT W01', serif), weight: 200, style: normal),
+	(group: code, id: regular, font: (monospace), weight: 400, style: normal);
+
+// Breakpoint Mixin
+@mixin font($group, $id:regular){
+	@each $font in $font-stack{
+		@if($group == map-get($font, group) and $id == map-get($font, id)){
+			font-family: map-get($font, font);
+      		font-weight: map-get($font, weight);
+      		font-style: map-get($font, style);
+    	}
+  	}
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
