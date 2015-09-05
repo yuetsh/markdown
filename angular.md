@@ -132,7 +132,7 @@ JavaScript的执行环境是单线程（Single Thread），所谓单线程就是
 	F3()
 	```
 	这三个函数就是三个任务，然后假设f1先执行，f2需要依赖f1，f3与f1、f2无关。
-	然后，就可以把f2作为f1的回调函数，f3的自然执行
+	然后，就可以把f2作为f1的回调函数，f3自然执行
 	
 	```javascript
 	funcation f1(callback) {
