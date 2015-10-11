@@ -33,4 +33,14 @@ db // 查看当前数据库，显示：xuyue
 ```
 xuyue // 这就是数据库的名字
 ```
-
+```
+show xuyue
+```
+```
+db.friends.insert(
+	{
+		name: "haha",
+		age: "23"
+	}
+)
+```
