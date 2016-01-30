@@ -2,7 +2,10 @@
 [视频](https://www.youtube.com/watch?v=KL4Yi3WtymA)笔记
 
 ## typescript
-[练习](https://github.com/AngularClass/typescript-workshop)
+[手册](https://github.com/AngularClass/typescript-workshop)
+[练习todo](https://github.com/tastejs/todomvc/tree/master/examples/angular2)
+### tsd
+
 ### 基础
 ```typescript
 var foo: string = "haha";
