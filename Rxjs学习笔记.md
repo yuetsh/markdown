@@ -14,6 +14,8 @@
 
 [关于Subject](https://segmentfault.com/a/1190000005069851)
 
+[实际例子](https://segmentfault.com/a/1190000004293922)
+
 ## 观察者模式
 
 现实生活中的订阅
@@ -104,3 +106,13 @@ observerB: 2 // 第二次订阅，之前接收到的2
 observerA: 3
 observerB: 3
 ```
+
+### 一些操作
+
+#### 创建
+#### 变换
+#### 过滤
+#### 结合
+#### ...
+
+### 和Promise
