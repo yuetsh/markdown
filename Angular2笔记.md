@@ -18,4 +18,5 @@ var foo: any
 ## Angular2
 视频中的是alpha version(45)
 
-现在的版本是beta
+现在的版本是 `RC5`
+
