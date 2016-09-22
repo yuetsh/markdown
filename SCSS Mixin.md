@@ -97,73 +97,48 @@ code{
 ```
 
 ### 3. Media Queries
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+简单的：
+```scss
+$tablet-width: 768px;
+$desktop-width: 1024px;
+
+@mixin tablet {
+  @media (min-width: #{$tablet-width}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+```
+
+MD风格的断点：
+```scss
+$_md-sm: 600px;
+$_md-md: 960px;
+$_md-lg: 1280px;
+
+// x < 600
+@mixin md-xs {
+  @media (max-width: #{$_md-sm-width - 1px}) {
+    @content;
+  }
+}
+
+// 600 <= x < 960
+@mixin md-sm {
+  @media (min-width: #{$_md-sm-width}) and (max-width: #{$_md-md-width - 1px}) {
+    @content;
+  }
+}
+
+// 960 <= x < 1280
+@mixin md-md {
+  @media (min-width: #{$_md-md-width}) and (max-width: #{$_md-lg-width - 1px}) {
+    @content;
+  }
+}
+```
